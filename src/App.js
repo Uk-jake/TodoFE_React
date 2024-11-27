@@ -12,8 +12,7 @@ function App() {
     // 데이터를 가져오는 함수
     const fetchData = async () => {
       try {
-        // todo-app-lb-03-588742455.ap-northeast-2.elb.amazonaws.com
-        const response = await axios.get('http://todo-app-lb-03-588742455.ap-northeast-2.elb.amazonaws.com/todos');
+        const response = await axios.get('https://ecs.ukjake.com/todos');
         setTodos(response.data); // 성공적으로 데이터를 가져왔을 때 상태를 설정
         setError(null); // 오류가 발생하지 않았음을 명확히 설정
       } catch (err) {
